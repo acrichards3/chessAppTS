@@ -17,8 +17,8 @@ export default function Sidebar() {
       } else {
         return (
           <div className={styles.link}>
-            <Link to={LINKS[id].url??'/'}>
-                <Icon icon={LINKS[id].icon} />
+            <Link to={LINKS[id].url??'/'} className={styles.linkText}>
+                <Icon icon={LINKS[id].icon} className={styles.linkIcon} size={18} />
                 {LINKS[id].title}
             </Link>
           </div>
