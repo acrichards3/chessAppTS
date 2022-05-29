@@ -1,2 +1,32 @@
 @import '../Variables.scss';
 
+.container {
+  display: flex;
+  position: sticky;
+  height: 80px;
+  background-color: $navbarColor;
+  padding-left: 3%;
+  padding-right: 3%;
+  .title {
+    display: flex;
+    align-items: center;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    padding-right: 5%;
+    fill: white;
+
+    .link {
+        margin-left: 2%;
+        margin-left: 2%;
+    }
+  }
+}
