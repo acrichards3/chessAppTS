@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { LINKS } from './LINKS';
 import { Link } from 'react-router-dom';
 import { Icon } from '@blueprintjs/core';
@@ -7,11 +7,11 @@ import styles from '../../../styles/navigation/Sidebar.module.scss';
 
 export default function Sidebar() {
   const returnLinks = () => {
-    const navTitle = (link: boolean, id: number) => {
-      if (link) {
+    const navTitle = (bold: boolean, id: number) => {
+      if (bold) {
         return (
           <div className={styles.seperator}>
-            <strong>{LINKS[id].title}</strong>
+            <strong className={styles.title}>{LINKS[id].title}</strong>
           </div>
         );
       } else {
