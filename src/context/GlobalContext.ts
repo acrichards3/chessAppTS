@@ -15,7 +15,7 @@ export interface RootState {
 };
 
 export const rootReducer = combineReducers({
-  navReducer: navReducer,
+  NavState: navReducer,
 });
 
 export const GlobalContext = React.createContext<{

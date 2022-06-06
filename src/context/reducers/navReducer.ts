@@ -14,7 +14,7 @@ export interface NavState {
 };
 
 export const navReducer = (
-  state: NavState,
+  state: NavState = initialNavState,
   action: { type: keyof typeof NAV_ACTIONS }
 ) => {
   switch (action.type) {
