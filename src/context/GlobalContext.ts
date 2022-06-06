@@ -12,7 +12,7 @@ export const initialState = {
 
 export interface RootState {
   NavState: NavState,
-}
+};
 
 export const rootReducer = combineReducers({
   navReducer: navReducer,

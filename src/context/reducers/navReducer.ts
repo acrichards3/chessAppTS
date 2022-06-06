@@ -11,7 +11,7 @@ export const initialNavState = {
 
 export interface NavState {
   activeLink: boolean;
-}
+};
 
 export const navReducer = (
   state: NavState,
