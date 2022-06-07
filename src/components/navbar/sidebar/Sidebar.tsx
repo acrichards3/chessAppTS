@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { LINKS } from './LINKS';
+import { LINKS } from '../topbar/LINKS';
 import { Link } from 'react-router-dom';
 import { Icon } from '@blueprintjs/core';
 import styles from '../../../styles/navigation/Sidebar.module.scss';

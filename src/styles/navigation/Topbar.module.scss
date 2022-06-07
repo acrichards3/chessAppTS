@@ -29,4 +29,18 @@
         margin-left: 3%;
     }
   }
+  .menu {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    .menuItem {
+      font-family: 'Readex Pro', sans-serif;
+      font-size: large;
+      color: white;
+      transition: 200ms;
+    }
+    .menuItem:hover {
+      color: red;
+    }
+  }
 }

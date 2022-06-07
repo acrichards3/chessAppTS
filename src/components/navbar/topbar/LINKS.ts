@@ -74,22 +74,22 @@ export const LINKS: Link[] = [
   {
     id: 10,
     url: '/game-of-the-week',
-    icon: 'crown',
-    title: 'Game of the Week',
+    icon: 'shield',
+    title: 'Privacy Policy',
     bold: false,
   },
   {
     id: 11,
     url: '/demo',
-    icon: 'ninja',
-    title: 'Demo',
+    icon: 'document',
+    title: 'Terms & Conditions',
     bold: false,
   },
   {
     id: 12,
     url: '/contact',
-    icon: 'phone',
-    title: 'Contact',
+    icon: 'lightbulb',
+    title: 'FAQ',
     bold: false,
   },
 ];
