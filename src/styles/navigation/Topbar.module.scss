@@ -10,10 +10,14 @@
   a {
     color: white;
     outline: none;
+    border: none;
     transition: 200ms;
   }
   a:hover {
-    color: $siteBlue;
+    color: lightgrey;
+  }
+  button {
+    outline: none;
   }
   .title {
     display: flex;
@@ -31,7 +35,6 @@
     justify-content: right;
     width: 100%;
     padding-right: 5%;
-
     .link {
       margin-right: 4%;
       margin-left: 4%;
@@ -40,8 +43,11 @@
       transition: 200ms;
     }
     .link:hover {
-      color: $siteBlue;
-      cursor: pointer;
+      color: lightgrey;
+    }
+    .activeLink {
+      @extend.link;
+      color: $siteBlue !important;
     }
   }
   .menu {
@@ -51,6 +57,8 @@
     margin-left: 5%;
     .menuItem {
       text-decoration: none;
+      background-color: $navbarColor;
+      border: none;
       font-family: 'Readex Pro', sans-serif;
       margin-left: 1rem;
       margin-right: 3rem;
@@ -59,8 +67,11 @@
       color: white;
       transition: 200ms;
     }
-    .menuItem:hover {
-      color: $siteBlue;
+    .activeMenuItem {
+      @extend.menuItem;
+      a {
+        color: $siteBlue;
+      }
     }
   }
 }
