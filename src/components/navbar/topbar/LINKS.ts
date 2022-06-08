@@ -5,7 +5,6 @@ interface Link {
   url?: string;
   icon?: IconName;
   title: string;
-  bold: boolean;
 }
 
 export const LINKS: Link[] = [
@@ -14,5 +13,17 @@ export const LINKS: Link[] = [
     url: '/',
     icon: 'chart',
     title: 'Dashboard',
+  },
+  {
+    id: 1,
+    url: '/',
+    icon: 'chart',
+    title: 'Stats',
+  },
+  {
+    id: 2,
+    url: '/',
+    icon: 'chart',
+    title: 'Rank',
   },
 ];

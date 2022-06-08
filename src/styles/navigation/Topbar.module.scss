@@ -22,11 +22,12 @@
     justify-content: right;
     width: 100%;
     padding-right: 5%;
-    fill: white;
-
+    color: white;
+    cursor: pointer;
+    
     .link {
-        margin-left: 3%;
-        margin-left: 3%;
+        margin-right: 4%;
+        margin-left: 4%;
         fill: white;
     }
   }
@@ -36,6 +37,9 @@
     margin-left: 5%;
     .menuItem {
       font-family: 'Readex Pro', sans-serif;
+      margin-left: 1rem;
+      margin-right: 3rem;
+      justify-content: space-between;
       font-size: large;
       color: white;
       transition: 200ms;
