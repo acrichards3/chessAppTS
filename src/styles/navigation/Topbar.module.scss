@@ -7,8 +7,17 @@
   background-color: $navbarColor;
   padding-left: 3%;
   padding-right: 3%;
+  a {
+    color: white;
+    outline: none;
+    transition: 200ms;
+  }
+  a:hover {
+    color: $siteBlue;
+  }
   .title {
     display: flex;
+    outline: none;
     align-items: center;
     font-family: 'Readex Pro', sans-serif;
     font-size: 30px;
@@ -22,20 +31,26 @@
     justify-content: right;
     width: 100%;
     padding-right: 5%;
-    color: white;
-    cursor: pointer;
-    
+
     .link {
-        margin-right: 4%;
-        margin-left: 4%;
-        fill: white;
+      margin-right: 4%;
+      margin-left: 4%;
+      color: white;
+      cursor: pointer;
+      transition: 200ms;
+    }
+    .link:hover {
+      color: $siteBlue;
+      cursor: pointer;
     }
   }
   .menu {
+    text-decoration: none;
     display: flex;
     align-items: center;
     margin-left: 5%;
     .menuItem {
+      text-decoration: none;
       font-family: 'Readex Pro', sans-serif;
       margin-left: 1rem;
       margin-right: 3rem;
@@ -45,7 +60,7 @@
       transition: 200ms;
     }
     .menuItem:hover {
-      color: red;
+      color: $siteBlue;
     }
   }
 }

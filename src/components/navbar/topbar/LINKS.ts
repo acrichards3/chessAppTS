@@ -2,8 +2,14 @@ import { IconName } from "@blueprintjs/icons";
 
 interface Link {
   id: number;
-  url?: string;
-  icon?: IconName;
+  url: string;
+  title: string;
+}
+
+interface Icon {
+  id: number;
+  url: string;
+  icon: IconName;
   title: string;
 }
 
@@ -11,19 +17,37 @@ export const LINKS: Link[] = [
   {
     id: 0,
     url: '/',
-    icon: 'chart',
     title: 'Dashboard',
   },
   {
     id: 1,
-    url: '/',
-    icon: 'chart',
+    url: '/stats',
     title: 'Stats',
   },
   {
     id: 2,
-    url: '/',
-    icon: 'chart',
+    url: '/rank',
     title: 'Rank',
+  },
+];
+
+export const ICONS: Icon[] = [
+  {
+    id: 0,
+    url: '/privacy-policy',
+    icon: 'shield',
+    title: 'Privacy Policy',
+  },
+  {
+    id: 1,
+    url: '/terms-and-conditions',
+    icon: 'document',
+    title: 'Terms & Conditions',
+  },
+  {
+    id: 2,
+    url: '/faq',
+    icon: 'lightbulb',
+    title: 'FAQ',
   },
 ];
