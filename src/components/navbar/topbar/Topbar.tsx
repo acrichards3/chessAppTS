@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Icon } from '@blueprintjs/core';
-import { LINKS, ICONS } from './LINKS';
+import { LINKS, ICONS } from '../LINKS';
 import styles from '../../../styles/navigation/Topbar.module.scss';
 import { Link } from 'react-router-dom';
 
 export default function Topbar() {
   const [active, setActive] = useState(0);
-  console.log(active);
 
   const returnLinks = () => {
     return LINKS.map((link) => {
