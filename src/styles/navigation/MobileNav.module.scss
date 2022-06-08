@@ -1,0 +1,22 @@
+@import '../Variables.scss';
+
+.container {
+    display: flex;
+    height: 80px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: $navbarColor;
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        font-family: $mainFont;
+        font-weight: bold;
+    }
+    .menuBtn {
+        color: white;
+        cursor: pointer;
+    }
+}
