@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Data from '../../data/getData';
 
 export default function Dashboard() {
-  return (
-    <div>Dashboard</div>
-  )
+  Data('acricha3');
+
+  return <div>Dashboard</div>;
 }
