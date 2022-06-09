@@ -1,32 +1,54 @@
 @import '../Variables.scss';
 
 .container {
+  display: flex;
+  height: 80px;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: $navbarColor;
+  .title {
     display: flex;
-    height: 80px;
-    padding-left: 3%;
-    padding-right: 3%;
-    background-color: $navbarColor;
-    .title {
-        display: flex;
-        outline: none;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 24px;
-        font-family: $mainFont;
-        font-weight: bold;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-family: $mainFont;
+    font-weight: bold;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    .menuBtn {
+      color: white;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: $navbarColor;
     }
-    .menu {
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        width: 100%;
-        .menuBtn {
-            color: white;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            background-color: $navbarColor;
-        }
-    }
+  }
+}
+.menuOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 3%;
+  padding-right: 3%;
+  height: 200px;
+  background-color: $openNav;
+  .link {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    font-size: large;
+    transition: 200ms;
+  }
+  .active {
+      @extend.link;
+      color: $siteBlue;
+  }
 }
