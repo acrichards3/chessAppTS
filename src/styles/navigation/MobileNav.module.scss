@@ -8,6 +8,7 @@
     background-color: $navbarColor;
     .title {
         display: flex;
+        outline: none;
         align-items: center;
         justify-content: center;
         color: white;
@@ -15,8 +16,17 @@
         font-family: $mainFont;
         font-weight: bold;
     }
-    .menuBtn {
-        color: white;
-        cursor: pointer;
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 100%;
+        .menuBtn {
+            color: white;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: $navbarColor;
+        }
     }
 }
