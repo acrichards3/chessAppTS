@@ -5,8 +5,8 @@ import { MOBILE } from '../LINKS';
 import styles from '../../../styles/navigation/MobileNav.module.scss';
 
 export default function MobileNav() {
-  const [isOpen, setIsOpen] = useState(true);
-  const [isActive, setActive] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive] = useState(0);
 
   const menuOpen = (isOpen: boolean) => {
     if (isOpen) {
@@ -38,7 +38,7 @@ export default function MobileNav() {
                 to={link.url}
                 key={link.id}
                 style={{ textDecoration: 'none' }}
-                className={isActive === link.id ? styles.active : styles.link}
+                className={active === link.id ? styles.active : styles.link}
                 onClick={() => setActive(link.id)}
               >
                 {link.title}
@@ -60,7 +60,7 @@ export default function MobileNav() {
           to="/"
           style={{ textDecoration: 'none' }}
           className={styles.title}
-          onClick={() => setIsOpen(false)}
+          onClick={() => setActive(0)}
         >
           ChessFront
         </Link>
