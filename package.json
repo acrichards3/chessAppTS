@@ -12,6 +12,7 @@
     "@types/node": "^16.11.36",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
+    "chess-web-api": "^1.1.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",

@@ -5,7 +5,7 @@ import MobileNav from './mobile/MobileNav';
 export default function Navbar() {
   const screenWidth: number = window.innerWidth;
   const [width, setWidth] = useState(screenWidth);
-  const breakpoint: number = 600;
+  const breakpoint: number = 768;
 
   useEffect(() => {
     window.addEventListener('resize', () => setWidth(window.innerWidth));
