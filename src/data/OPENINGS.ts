@@ -167,21 +167,6 @@ function OPENINGS() {
       dailyWins: 0,
       dailyLosses: 0,
       dailyDraws: 0,
-      overallWinrate: function () {
-        return (this.wins / this.count).toFixed(2) * 100 + '%';
-      },
-      rapidWinrate: function () {
-        return (this.rapidWins / this.rapidGames).toFixed(2) * 100 + '%';
-      },
-      blitzWinrate: function () {
-        return (this.blitzWins / this.blitzGames).toFixed(2) * 100 + '%';
-      },
-      bulletWinrate: function () {
-        return (this.bulletWins / this.bulletGames).toFixed(2) * 100 + '%';
-      },
-      dailyWinrate: function () {
-        return (this.dailyWins / this.dailyGames).toFixed(2) * 100 + '%';
-      },
     }));
   };
   return createObjs();

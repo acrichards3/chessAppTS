@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const NAV_ACTIONS = {
   ACTIVE_LINK_TRUE: 'ACTIVE_LINK_TRUE',
   ACTIVE_LINK_FALSE: 'ACTIVE_LINK_FALSE',
