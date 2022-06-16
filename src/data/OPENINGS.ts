@@ -124,7 +124,7 @@ function OPENINGS() {
     'Indian Game: Knights Variation',
   ];
   const createObjs = () => {
-    return names.map((value, i) => ({
+    return names.map((value: string, i: number) => ({
       id: i,
       name: value,
       url: value
