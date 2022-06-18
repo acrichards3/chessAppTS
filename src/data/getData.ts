@@ -1,4 +1,5 @@
 import OPENINGS from "./OPENINGS";
+import { Player } from "./responseTypes/statInterface";
 export const ChessWebAPI = require('chess-web-api');
 export const chessAPI = new ChessWebAPI();
 
@@ -52,7 +53,7 @@ export default function Data(user: string) {
       }
     )
     .then(
-      function (games: Array<string>) {
+      function (games: Array<any>) {
         const allOpenings = OPENINGS();
 
         for (let i=0; i < games.length; i++) {
