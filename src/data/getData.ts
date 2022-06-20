@@ -1,5 +1,4 @@
-import OPENINGS from "./OPENINGS";
-import { Player } from "./responseTypes/statInterface";
+import OPENINGS from './OPENINGS';
 export const ChessWebAPI = require('chess-web-api');
 export const chessAPI = new ChessWebAPI();
 
@@ -24,7 +23,7 @@ export default function Data(user: string) {
         }
 
         async function getJson(num: number) {
-          const response = await fetch(recents[num]); 
+          const response = await fetch(recents[num]);
           return await response.json();
         }
 
@@ -56,11 +55,42 @@ export default function Data(user: string) {
       function (games: Array<any>) {
         const allOpenings = OPENINGS();
 
-        for (let i=0; i < games.length; i++) {
+        for (let i = 0; i < games.length; i++) {
           const game = games[i];
+
+          const timeClassArr = ['rapid', 'blitz', 'bullet', 'daily'];
           const timeClass = game.time_class;
           const isRated = game.rated;
           const currentGamePgn = games[i].pgn;
+
+          const blackUser = games[i].black.username;
+          const whiteUser = games[i].black.username;
+
+          const blackResult = games[i].black.result;
+          const whiteResult = games[i].white.result;
+
+
+          const winConditions = ['win'];
+          const lossConditions = ['checkmated', 'resigned', 'lose'];
+          const drawConditions = [
+            'agreed',
+            'repetition',
+            'stalemate',
+            'insufficient',
+            '50move',
+            'timevsinsufficient',
+          ];
+
+          const conditions = [winConditions, lossConditions, drawConditions];
+
+          const increaseOpeningValues = (id: number): void => {
+            if (games[id].rated) {
+              
+            }
+          };
+
+          increaseOpeningValues(i);
+          console.log('Openings Data', allOpenings);
         }
       },
       function (err: Error) {
