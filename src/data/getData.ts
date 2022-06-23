@@ -84,9 +84,12 @@ export default function Data(user: string) {
           const conditions = [winConditions, lossConditions, drawConditions];
 
           const increaseOpeningValues = (id: number): void => {
-            if (games[id].rated) {
-              
-            }
+            console.log('another test', allOpenings[0].values[0].conditions);
+            allOpenings[id].values.map((category) => {
+              if (game.rated) {
+                console.log('WHATS THIS', category.conditions[0]);
+              }
+            })
           };
 
           increaseOpeningValues(i);
