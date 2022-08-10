@@ -1,5 +1,4 @@
 import OPENINGS from "./OPENINGS";
-import { Player } from "./responseTypes/statInterface";
 import { WIN, LOSS, DRAW } from './OPENINGS_ARRAYS';
 export const ChessWebAPI = require('chess-web-api');
 export const chessAPI = new ChessWebAPI();
@@ -25,7 +24,7 @@ export default function Data(user: string) {
         }
 
         async function getJson(num: number) {
-          const response = await fetch(recents[num]); 
+          const response = await fetch(recents[num]);
           return await response.json();
         }
 
@@ -57,7 +56,7 @@ export default function Data(user: string) {
       function (games: Array<any>) {
         const allOpenings = OPENINGS();
 
-        for (let i=0; i < games.length; i++) {
+        for (let i = 0; i < games.length; i++) {
           const game = games[i];
           const currentGamePgn: string = game.pgn;
           const color: string = (user.toUpperCase() === game.white.username) ? 'white' : 'black';

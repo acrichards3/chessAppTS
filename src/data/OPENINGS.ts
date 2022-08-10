@@ -1,5 +1,5 @@
 function OPENINGS() {
-  const names = [
+  const names: string[] = [
     "King's Fianchetto Opening",
     "Queen's Pawn Opening",
     'Réti Opening',
