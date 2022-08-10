@@ -138,15 +138,19 @@ function OPENINGS() {
         .replaceAll('ü', 'u')
         .replaceAll('ů', 'u'),
       count: 0,
+
       whiteCount: 0,
       blackCount: 0,
+
       wins: 0,
       losses: 0,
       draws: 0,
+
       rapidGames: 0,
       blitzGames: 0,
       bulletGames: 0,
       dailyGames: 0,
+
       rapidGamesWhite: 0,
       blitzGamesWhite: 0,
       bulletGamesWhite: 0,
@@ -155,6 +159,7 @@ function OPENINGS() {
       blitzGamesBlack: 0,
       bulletGamesBlack: 0,
       dailyGamesBlack: 0,
+      
       rapidWins: 0,
       rapidLosses: 0,
       rapidDraws: 0,

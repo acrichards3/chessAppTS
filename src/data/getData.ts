@@ -1,5 +1,6 @@
 import OPENINGS from "./OPENINGS";
 import { Player } from "./responseTypes/statInterface";
+import { WIN, LOSS, DRAW } from './OPENINGS_ARRAYS';
 export const ChessWebAPI = require('chess-web-api');
 export const chessAPI = new ChessWebAPI();
 
@@ -58,9 +59,86 @@ export default function Data(user: string) {
 
         for (let i=0; i < games.length; i++) {
           const game = games[i];
-          const timeClass = game.time_class;
-          const isRated = game.rated;
-          const currentGamePgn = games[i].pgn;
+          const currentGamePgn: string = game.pgn;
+          const color: string = (user.toUpperCase() === game.white.username) ? 'white' : 'black';
+          const timeClass: string = game.time_class;
+          const isRated: boolean = game.rated;
+
+          const findResult = () => {
+            let result: string = '';
+
+            if (color === 'white') {
+              result =  game.white.result;
+            } else {
+              result = game.black.result;
+            }
+
+            if (WIN.includes(result)) {
+              result = 'win';
+            } else if (LOSS.includes(result)) {
+              result = 'loss';
+            } else if (DRAW.includes(result)) {
+              result = 'draw';
+            } else {
+              console.log('ERR: NO GAME RESULT');
+              return;
+            }
+
+            return result;
+          }
+
+
+          for (let j=0; j < allOpenings.length; j++) {
+            const currentOpening = allOpenings[j];
+
+            if(currentGamePgn.includes(currentOpening.url) && isRated) {
+              currentOpening.count += 1;
+
+              switch (color) {
+                case 'white':
+                  currentOpening.whiteCount += 1;
+                  break;
+                case 'black':
+                  currentOpening.blackCount += 1;
+                  break;
+                default:
+                  return;
+              }
+
+              switch (findResult()) {
+                case 'win':
+                  currentOpening.wins += 1;
+                  break;
+                case 'loss':
+                  currentOpening.losses += 1;
+                  break;
+                case 'draw':
+                  currentOpening.draws += 1;
+                  break;
+                default:
+                  return;
+              }
+
+              switch (timeClass) {
+                case 'rapid':
+                  currentOpening.rapidGames += 1;
+                  break;
+                case 'blitz':
+                  currentOpening.blitzGames += 1;
+                  break;
+                case 'bullet':
+                  currentOpening.bulletGames += 1;
+                  break;
+                case 'daily':
+                  currentOpening.dailyGames += 1;
+                  break;
+                default:
+                  return;
+              }
+      
+            }
+          }
+          console.log(allOpenings, 'testtttt');
         }
       },
       function (err: Error) {
