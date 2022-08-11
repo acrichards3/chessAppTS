@@ -1,6 +1,6 @@
 export const WIN: string[] = ['win'];
 
-export const LOSS: string[] = ['checkmated', 'resigned', 'lose'];
+export const LOSS: string[] = ['checkmated', 'resigned', 'lose', 'timeout'];
 
 export const DRAW: string[] = [
   'agreed',

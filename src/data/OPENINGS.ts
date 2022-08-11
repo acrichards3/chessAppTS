@@ -151,27 +151,67 @@ function OPENINGS() {
       bulletGames: 0,
       dailyGames: 0,
 
-      rapidGamesWhite: 0,
-      blitzGamesWhite: 0,
-      bulletGamesWhite: 0,
-      dailyGamesWhite: 0,
-      rapidGamesBlack: 0,
-      blitzGamesBlack: 0,
-      bulletGamesBlack: 0,
-      dailyGamesBlack: 0,
-      
-      rapidWins: 0,
-      rapidLosses: 0,
-      rapidDraws: 0,
-      blitzWins: 0,
-      blitzLosses: 0,
-      blitzDraws: 0,
-      bulletWins: 0,
-      bulletLosses: 0,
-      bulletDraws: 0,
-      dailyWins: 0,
-      dailyLosses: 0,
-      dailyDraws: 0,
+      /*get rapidGamesWhite() {
+        return this.whiteCount + this.rapidGames;
+      },
+      get blitzGamesWhite() {
+        return this.whiteCount + this.blitzGames;
+      },
+      get bulletGamesWhite() {
+        return this.whiteCount + this.bulletGames;
+      },
+      get dailyGamesWhite() {
+        return this.whiteCount + this.dailyGames;
+      },
+      get rapidGamesBlack() {
+        return this.blackCount + this.rapidGames;
+      },
+      get blitzGamesBlack() {
+        return this.blackCount + this.blitzGames;
+      },
+      get bulletGamesBlack() {
+        return this.blackCount + this.bulletGames;
+      },
+      get dailyGamesBlack() {
+        return this.blackCount + this.dailyGames;
+      },
+
+      get rapidWins() {
+        return this.wins + this.rapidGames;
+      },
+      get rapidLosses() {
+        return this.losses + this.rapidGames;
+      },
+      get rapidDraws() {
+        return this.draws + this.rapidGames;
+      },
+      get blitzWins() {
+        return this.wins + this.blitzGames;
+      },
+      get blitzLosses() {
+        return this.losses + this.blitzGames;
+      },
+      get blitzDraws() {
+        return this.draws + this.blitzGames;
+      },
+      get bulletWins() {
+        return this.wins + this.bulletGames;
+      },
+      get bulletLosses() {
+        return this.losses + this.bulletGames;
+      },
+      get bulletDraws() {
+        return this.draws + this.bulletGames;
+      },
+      get dailyWins() {
+        return this.wins + this.dailyGames;
+      },
+      get dailyLosses() {
+        return this.losses + this.dailyGames;
+      },
+      get dailyDraws() {
+        return this.draws + this.dailyGames;
+      }, */
     }));
   };
   return createObjs();

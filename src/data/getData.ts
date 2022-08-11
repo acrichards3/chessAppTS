@@ -63,42 +63,41 @@ export default function Data(user: string) {
           const timeClass: string = game.time_class;
           const isRated: boolean = game.rated;
 
-          const findResult = () => {
-            let result: string = '';
-
-            if (color === 'white') {
-              result =  game.white.result;
-            } else {
-              result = game.black.result;
-            }
-
-            if (WIN.includes(result)) {
-              result = 'win';
-            } else if (LOSS.includes(result)) {
-              result = 'loss';
-            } else if (DRAW.includes(result)) {
-              result = 'draw';
-            } else {
-              console.log('ERR: NO GAME RESULT');
-              return;
-            }
-
-            return result;
-          }
-
-
           for (let j=0; j < allOpenings.length; j++) {
             const currentOpening = allOpenings[j];
 
+            const findResult = () => {
+              let result: string = '';
+
+              if (color === 'white') {
+                result = game.white.result;
+              } else {
+                result = game.black.result;
+              }
+
+              if (WIN.includes(result)) {
+                result = 'win';
+              } else if (LOSS.includes(result)) {
+                result = 'loss';
+              } else if (DRAW.includes(result)) {
+                result = 'draw';
+              } else {
+                console.log('ERR: NO GAME RESULT', result, game, currentOpening);
+                return;
+              }
+
+              return result;
+            };
+
             if(currentGamePgn.includes(currentOpening.url) && isRated) {
-              currentOpening.count += 1;
+              currentOpening.count++;
 
               switch (color) {
                 case 'white':
-                  currentOpening.whiteCount += 1;
+                  currentOpening.whiteCount++;
                   break;
                 case 'black':
-                  currentOpening.blackCount += 1;
+                  currentOpening.blackCount++;
                   break;
                 default:
                   return;
@@ -106,13 +105,13 @@ export default function Data(user: string) {
 
               switch (findResult()) {
                 case 'win':
-                  currentOpening.wins += 1;
+                  currentOpening.wins++;
                   break;
                 case 'loss':
-                  currentOpening.losses += 1;
+                  currentOpening.losses++;
                   break;
                 case 'draw':
-                  currentOpening.draws += 1;
+                  currentOpening.draws++;
                   break;
                 default:
                   return;
@@ -120,21 +119,20 @@ export default function Data(user: string) {
 
               switch (timeClass) {
                 case 'rapid':
-                  currentOpening.rapidGames += 1;
+                  currentOpening.rapidGames++;
                   break;
                 case 'blitz':
-                  currentOpening.blitzGames += 1;
+                  currentOpening.blitzGames++;
                   break;
                 case 'bullet':
-                  currentOpening.bulletGames += 1;
+                  currentOpening.bulletGames++;
                   break;
                 case 'daily':
-                  currentOpening.dailyGames += 1;
+                  currentOpening.dailyGames++;
                   break;
                 default:
                   return;
               }
-      
             }
           }
           console.log(allOpenings, 'testtttt');
